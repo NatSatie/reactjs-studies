@@ -1,5 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
+import {Grid} from 'semantic-ui-react';
+import Menu from './Menu';
+import 'semantic-ui-css/semantic.min.css';
 
 class WelcomePage extends React.Component {
 
@@ -10,11 +13,16 @@ class WelcomePage extends React.Component {
   render() {
     return (
       <div>
-        <div id="divWelcome">
-          <h1>
-            Welcome user, would you like a coffee?
-          </h1>
-        </div>
+        <Grid>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Menu/>
+            </Grid.Column>
+            <Grid.Column>
+              <p> animation slot </p>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     );
   }
