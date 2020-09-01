@@ -11,6 +11,7 @@
     "graceful-fs": "^4.2.4",
     "gulp-util": "^3.0.8",
     "minimatch": "^3.0.4",
+    "mysql": "^2.18.1",
     "natives": "^1.1.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
