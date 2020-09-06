@@ -8,13 +8,17 @@ type MenuItemProps = {
 
 class MenuItem extends React.Component<MenuIemProps> {
 
+  handleClick(){
+    console.log("AI!");
+  }
+
   render() {
     const {
       name
     } = this.props;
     return (
       <div>
-        <h1> {name} </h1>
+        <button onClick={this.handleClick}> {name} </button>
       </div>
     );
   }

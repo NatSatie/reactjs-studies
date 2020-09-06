@@ -19,7 +19,11 @@ class WelcomePage extends React.Component {
           <Grid.Row columns={2}>
             <Grid.Column>
               <Menu/>
-              <MenuItem name={DrinkList[0].name}/>
+              {
+                DrinkList.map( d => (
+                  <MenuItem name={d.name} onClick={this.handleClick}/>
+                ))
+              }
             </Grid.Column>
             <Grid.Column>
               <p> animation slot </p>
