@@ -1,18 +1,27 @@
 // @flow
 export const DrinkList = [
   {
-    name: 'Expresso'
+    name: 'Expresso',
+    img: '../img/expresso.jpg'
   },
   {
-    name: 'Latte'
+    name: 'Expresso Macchiato',
+    img: '../img/expressoMacchiato.jpg'
   },
   {
-    name: 'Hot Chocolate'
+    name: 'Americano',
+    img: '../img/americano.jpg'
   },
   {
-    name: 'Latte'
+    name: 'Caffé Latte',
+    img: '../img/caffeLatte.jpg'
   },
   {
-    name: 'Mocha'
+    name: 'Caffé Mocha',
+    img: '../img/caffeLatte.jpg'
+  },
+  {
+    name: 'Cappuccino',
+    img: '../img/cappuccino.jpg'
   }
 ]

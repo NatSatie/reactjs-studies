@@ -3,22 +3,26 @@ import {Grid} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
 type MenuItemProps = {
-  name: string
+  name: string,
+  selected: boolean
 }
 
 class MenuItem extends React.Component<MenuIemProps> {
 
   handleClick(){
-    console.log("AI!");
+    console.log('clicked');
   }
 
   render() {
     const {
-      name
+      name,
+      selected
     } = this.props;
     return (
       <div>
-        <button onClick={this.handleClick}> {name} </button>
+        <button onClick={() => (
+            this.handleClick()
+        )}> {name} </button>
       </div>
     );
   }
