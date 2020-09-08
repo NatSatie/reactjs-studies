@@ -1,34 +1,77 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect }  from 'react'
 //import ReactDOM from 'react-dom';
-import {Grid} from 'semantic-ui-react';
-import Menu from './Menu';
-import MenuItem from './MenuItem';
-import ImageSlot from './ImageSlot';
-import {DrinkList} from '../const/drink';
-import 'semantic-ui-css/semantic.min.css';
+import {Grid} from 'semantic-ui-react'
+import MenuItem from './MenuItem'
+import ImageSlot from './ImageSlot'
+import {DrinkList1, DrinkList2} from '../const/drink'
+import 'semantic-ui-css/semantic.min.css'
+import americano from '../img/americano.jpg';
+import caffeLatte from '../img/caffeLatte.jpg';
+import caffeMocha from '../img/caffeMocha.jpg';
+import cappuccino from '../img/cappuccino.jpg';
+import expresso from '../img/expresso.jpg';
+import expressoMacchiato from '../img/expressoMacchiato.jpg';
 
-const WelcomePage = () => {
-  const [index, setIndex] = useState(0);
-  return (
-    <div>
-      <Grid>
-        <Grid.Row columns={2}>
-          <Grid.Column>
-            <Menu/>
-            {
-              DrinkList.map( d => (
-                <MenuItem name={d.name} onClick={() => setIndex(d.index)}/>
-              ))
-            }
-          </Grid.Column>
-          <Grid.Column>
-            <p> animation slot </p>
-            <ImageSlot name={DrinkList[index].name} img={DrinkList[index].img}/>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </div>
-  );
+const drinkChosen = React.createContext(0)
+
+class WelcomePage extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Grid>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <div style={{height:'47vh'}}>
+                <h1> Menu </h1>
+                {
+                  DrinkList1.map( d => (
+                    <MenuItem name={d.name}/>
+                  ))
+                }
+              </div>
+              <ImageSlot
+                imgAddress={[expresso, americano]}
+                drinkName={['Expresso', 'Americano']}
+                heightSize='50vh'
+                widthSize='50vw'
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <Grid>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <div style={{width:'35vw'}}>
+                      {
+                        DrinkList2.map( d => (
+                          <MenuItem name={d.name}/>
+                        ))
+                      }
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <ImageSlot
+                      imgAddress={[expresso, americano]}
+                      drinkName={['Expresso', 'Americano']}
+                      heightSize='69vh'
+                      widthSize='15vw'
+                    />
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+              <ImageSlot
+                imgAddress={[expresso, americano]}
+                drinkName={['Expresso', 'Americano']}
+                heightSize='28vh'
+                widthSize='50vw'
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
+    )
+  }
+
 }
 
-export default WelcomePage;
+export default WelcomePage

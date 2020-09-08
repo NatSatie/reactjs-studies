@@ -9,10 +9,6 @@ type MenuItemProps = {
 
 class MenuItem extends React.Component<MenuIemProps> {
 
-  handleClick(){
-    console.log('clicked');
-  }
-
   render() {
     const {
       name,
@@ -20,9 +16,7 @@ class MenuItem extends React.Component<MenuIemProps> {
     } = this.props;
     return (
       <div>
-        <button onClick={() => (
-            this.handleClick()
-        )}> {name} </button>
+        <h4> {name} </h4>
       </div>
     );
   }

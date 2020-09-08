@@ -1,27 +1,42 @@
 // @flow
-export const DrinkList = [
+export const DrinkList1 = [
   {
-    name: 'Expresso',
-    img: '../img/expresso.jpg'
+    name: 'Expresso'
   },
   {
-    name: 'Expresso Macchiato',
-    img: '../img/expressoMacchiato.jpg'
+    name: 'Expresso Macchiato'
   },
   {
-    name: 'Americano',
-    img: '../img/americano.jpg'
+    name: 'Americano'
   },
   {
-    name: 'Caffé Latte',
-    img: '../img/caffeLatte.jpg'
+    name: 'Caffé Latte'
   },
   {
-    name: 'Caffé Mocha',
-    img: '../img/caffeLatte.jpg'
+    name: 'Caffé Mocha'
   },
   {
-    name: 'Cappuccino',
-    img: '../img/cappuccino.jpg'
+    name: 'Cappuccino'
+  }
+]
+
+export const DrinkList2 = [
+  {
+    name: 'Expresso'
+  },
+  {
+    name: 'Expresso Macchiato'
+  },
+  {
+    name: 'Americano'
+  },
+  {
+    name: 'Caffé Latte'
+  },
+  {
+    name: 'Caffé Mocha'
+  },
+  {
+    name: 'Cappuccino'
   }
 ]
