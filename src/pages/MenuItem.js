@@ -15,8 +15,9 @@ class MenuItem extends React.Component<MenuIemProps> {
       selected
     } = this.props;
     return (
-      <div>
-        <h4> {name} </h4>
+      <div class='menu-item'>
+        <h4 class='menu-item-name' > {name} </h4>
+        <h5 class='menu-item-price' > R$**,** </h5>
       </div>
     );
   }

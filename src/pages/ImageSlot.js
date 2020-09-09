@@ -20,6 +20,7 @@ const ImageSlot = ({imgAddress ,drinkName, heightSize, widthSize}: ImageSlotProp
               <div className="each-slide">
                 <div style={{
                     'backgroundImage': `url(${p})`,
+                    'background-size': 'contain',
                     height: heightSize,
                     width: widthSize
                   }}>

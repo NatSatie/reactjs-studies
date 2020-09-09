@@ -5,12 +5,13 @@ import MenuItem from './MenuItem'
 import ImageSlot from './ImageSlot'
 import {DrinkList1, DrinkList2} from '../const/drink'
 import 'semantic-ui-css/semantic.min.css'
-import americano from '../img/americano.jpg';
-import caffeLatte from '../img/caffeLatte.jpg';
-import caffeMocha from '../img/caffeMocha.jpg';
-import cappuccino from '../img/cappuccino.jpg';
-import expresso from '../img/expresso.jpg';
-import expressoMacchiato from '../img/expressoMacchiato.jpg';
+import americano from '../img/americano.jpg'
+import caffeLatte from '../img/caffeLatte.jpg'
+import caffeMocha from '../img/caffeMocha.jpg'
+import cappuccino from '../img/cappuccino.jpg'
+import expresso from '../img/expresso.jpg'
+import expressoMacchiato from '../img/expressoMacchiato.jpg'
+import '../const/style.css'
 
 const drinkChosen = React.createContext(0)
 
@@ -23,7 +24,7 @@ class WelcomePage extends React.Component {
           <Grid.Row columns={2}>
             <Grid.Column>
               <div style={{height:'47vh'}}>
-                <h1> Menu </h1>
+                <h1 id='title'> Menu </h1>
                 {
                   DrinkList1.map( d => (
                     <MenuItem name={d.name}/>
@@ -31,8 +32,8 @@ class WelcomePage extends React.Component {
                 }
               </div>
               <ImageSlot
-                imgAddress={[expresso, americano]}
-                drinkName={['Expresso', 'Americano']}
+                imgAddress={[expresso, caffeLatte]}
+                drinkName={['Expresso', 'Caffe Latte']}
                 heightSize='50vh'
                 widthSize='50vw'
               />
@@ -51,8 +52,8 @@ class WelcomePage extends React.Component {
                   </Grid.Column>
                   <Grid.Column>
                     <ImageSlot
-                      imgAddress={[expresso, americano]}
-                      drinkName={['Expresso', 'Americano']}
+                      imgAddress={[caffeMocha, expressoMacchiato]}
+                      drinkName={['Caffe Mocha', 'Expresso Macchiato']}
                       heightSize='69vh'
                       widthSize='15vw'
                     />
@@ -60,8 +61,8 @@ class WelcomePage extends React.Component {
                 </Grid.Row>
               </Grid>
               <ImageSlot
-                imgAddress={[expresso, americano]}
-                drinkName={['Expresso', 'Americano']}
+                imgAddress={[expressoMacchiato, expresso]}
+                drinkName={['Expresso Macchiato', 'Expresso']}
                 heightSize='28vh'
                 widthSize='50vw'
               />
