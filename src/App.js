@@ -1,7 +1,7 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
 import './App.css';
-import WelcomePage from './pages/WelcomePage';
+import WelcomePage from './page/WelcomePage';
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {

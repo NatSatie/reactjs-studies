@@ -1,8 +1,9 @@
 import React, { useState, useEffect }  from 'react'
 //import ReactDOM from 'react-dom';
-import {Grid} from 'semantic-ui-react'
+import {Grid, Container} from 'semantic-ui-react'
 import MenuItem from './MenuItem'
 import ImageSlot from './ImageSlot'
+import ImageSquare from './ImageSquare'
 import {DrinkList1, DrinkList2} from '../const/drink'
 import 'semantic-ui-css/semantic.min.css'
 import americano from '../img/americano.jpg'
@@ -15,7 +16,7 @@ import '../const/style.css'
 
 const drinkChosen = React.createContext(0)
 
-class WelcomePage extends React.Component {
+class CoffeeShop extends React.Component {
 
   render() {
     return (
@@ -24,19 +25,29 @@ class WelcomePage extends React.Component {
           <Grid.Row columns={2}>
             <Grid.Column>
               <div style={{height:'47vh'}}>
-                <h1 id='title'> Menu </h1>
+                <h1 id='title'> Cardápio </h1>
                 {
                   DrinkList1.map( d => (
                     <MenuItem name={d.name}/>
                   ))
                 }
               </div>
-              <ImageSlot
-                imgAddress={[expresso, caffeLatte]}
-                drinkName={['Expresso', 'Caffe Latte']}
-                heightSize='50vh'
-                widthSize='50vw'
-              />
+              <Grid>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <ImageSquare
+                      imgAddress={[expresso, caffeLatte]}
+                      drinkName={['Expresso', 'Caffe Latte']}
+                    />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <ImageSquare
+                      imgAddress={[expresso, caffeLatte]}
+                      drinkName={['Expresso', 'Caffe Latte']}
+                    />
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
             </Grid.Column>
             <Grid.Column>
               <Grid>
@@ -75,4 +86,4 @@ class WelcomePage extends React.Component {
 
 }
 
-export default WelcomePage
+export default CoffeeShop
