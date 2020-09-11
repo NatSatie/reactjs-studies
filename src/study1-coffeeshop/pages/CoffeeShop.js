@@ -53,7 +53,7 @@ class CoffeeShop extends React.Component {
               <Grid>
                 <Grid.Row columns={2}>
                   <Grid.Column>
-                    <div style={{width:'35vw'}}>
+                    <div>
                       {
                         DrinkList2.map( d => (
                           <MenuItem name={d.name}/>
@@ -65,7 +65,7 @@ class CoffeeShop extends React.Component {
                     <ImageSlot
                       imgAddress={[caffeMocha, expressoMacchiato]}
                       drinkName={['Caffe Mocha', 'Expresso Macchiato']}
-                      heightSize='69vh'
+                      heightSize='64vh'
                       widthSize='15vw'
                     />
                   </Grid.Column>
@@ -74,7 +74,7 @@ class CoffeeShop extends React.Component {
               <ImageSlot
                 imgAddress={[expressoMacchiato, expresso]}
                 drinkName={['Expresso Macchiato', 'Expresso']}
-                heightSize='28vh'
+                heightSize='25vh'
                 widthSize='50vw'
               />
             </Grid.Column>
